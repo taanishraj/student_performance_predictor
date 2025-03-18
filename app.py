@@ -63,6 +63,13 @@ def faculty_home():
 def student_predictor():
     return render_template('spredictor.html')
 
+@app.route('/logout')
+def logout():
+    # Clear the user session
+    session.pop('userEmail', None)  # Remove user email from session
+    session.pop('userPassword', None)  # Remove user password from session
+    return redirect(url_for('home')
+
 @app.route('/student_result')
 def student_result():
     return render_template('student_result.html')
