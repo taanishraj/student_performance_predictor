@@ -23,4 +23,4 @@ jobs:
         env:
           RENDER_API_KEY: ${{ secrets.RENDER_API_KEY }}
         run: |
-          curl -X POST https://api.render.com/deploy/srv-cvcfhs3qf0us73dfodv0?key=4QptOcvTH80
+          curl -X POST https://api.render.com/deploy/srv-cvcfhs3qf0us73dfodv0?key=$RENDER_API_KEY
